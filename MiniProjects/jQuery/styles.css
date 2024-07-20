@@ -1,0 +1,11 @@
+/* Bootstrap is a framework */
+
+.big-title{
+    color: yellow;
+    font-size: 10rem;
+    font-family: cursive;
+}
+
+.margin-left{
+    margin-left: 3rem;
+}

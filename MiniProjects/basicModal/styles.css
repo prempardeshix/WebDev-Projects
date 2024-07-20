@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.content {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color: rgba(78, 78, 78, 0.5);
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  z-index: 2;
+  border-radius: 3px;
+}
+
+.scale {
+  scale: 1;
+}
+
+.opacity {
+  opacity: 0.25;
+}
+
+.modal {
+  position: absolute;
+  height: 100px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 1px solid white;
+  scale: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 3px;
+}
+
+.close {
+  height: 20px;
+  margin: 5px;
+  background: none;
+  border: 0.1px solid grey;
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 3px;
+}
+
+.open {
+  margin: 5px;
+  background: none;
+  border: 0.5px solid grey;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.upperCircle {
+  border: 1px solid white;
+  border-radius: 100%;
+  height: 100px;
+  width: 100px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(255, 200, 124) 0%,
+    rgb(252, 251, 121) 90%
+  );
+  position: absolute;
+  z-index: 1;
+  top: 75px;
+  left: 250px;
+  animation: upper 4s ease-in-out 0s infinite alternate;
+  /* box-shadow: 2px 2px white; */
+}
+
+.lowerCircle {
+  border-radius: 100%;
+  border: 1px solid white;
+  height: 100px;
+  width: 100px;
+  background: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+  position: absolute;
+  z-index: 1;
+  top: 300px;
+  left: 700px;
+  animation: lower 4s ease-in-out 0s infinite alternate;
+  /* box-shadow: 2px 2px white; */
+}
+
+@keyframes upper {
+  from {
+    top: 75px;
+    left: 250px;
+  }
+  to {
+    top: 75px;
+    left: 400px;
+  }
+}
+
+@keyframes lower {
+  from {
+    top: 300px;
+    left: 700px;
+  }
+  to {
+    top: 300px;
+    left: 550px;
+  }
+}
